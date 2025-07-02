@@ -1,0 +1,44 @@
+/* Teléfonos pequeños (menor a 576px) */
+@media (max-width: 575.98px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .burger {
+    width: 80%;
+    height: auto;
+  }
+
+  .cta h3 {
+    font-size: 2.2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Tablets (576px a 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .burger {
+    width: 40vw;
+    height: auto;
+  }
+}
+
+/* Laptops (768px a 1200px) */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .hero h2 {
+    font-size: 4rem;
+  }
+
+  .burger {
+    width: 25vw;
+    height: auto;
+  }
+}

@@ -1,0 +1,157 @@
+/* === Register Page === */
+.register-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1E1E1E;
+  background-image: url('../../public/images/login.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.nav-register-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1.5rem;
+  color: #E9E3DC;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.register-main-title {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 3rem;
+  color: #E9E3DC;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.register-container {
+  background: #E9E3DC;
+  border: 4px solid #1E1E1E;
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.register-subtitle {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 2rem;
+  color: #1E1E1E;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.register-label {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.register-input {
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5rem auto 1.5rem;
+  height: 60px;
+  border: 1px solid #1E1E1E;
+  border-radius: 10px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  display: block;
+}
+
+.register-button {
+  background: #E9E3DC;
+  border: 4px solid #1E1E1E;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 15px 30px;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  cursor: pointer;
+  margin-top: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.register-footer {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.register-footer-link {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+  .register-main-title {
+    font-size: 2.2rem;
+  }
+
+  .register-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .register-container {
+    padding: 2rem 1rem;
+  }
+
+  .register-input {
+    width: 80%;
+  }
+
+  .register-button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register-main-title {
+    font-size: 1.8rem;
+  }
+
+  .register-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .register-label {
+    font-size: 1rem;
+  }
+
+  .register-button {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+}

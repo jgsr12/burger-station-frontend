@@ -1,0 +1,67 @@
+.cta {
+  width: 100%;
+  max-width: 895px;
+  margin: 0 auto;
+  text-align: center;
+  color: #E9E3DC;
+  margin-top: 120px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.cta-title {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 70px;
+  line-height: 101.9%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  width: 196px;
+  height: 60px;
+  background: #D1EF53;
+  color: #1E1E1E;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000;
+  transition: transform 0.2s ease;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none; /* ✅ Elimina subrayado */
+  border-radius: 6px;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 40px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+    line-height: 60px;
+  }
+}

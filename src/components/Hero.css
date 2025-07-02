@@ -1,0 +1,130 @@
+/* === Hero === */
+.hero {
+  position: relative;
+  max-width: 1440px;
+  height: auto;
+  min-height: 500px;
+  background-color: #1e1e1e;
+  color: #E9E3DC;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero h2 {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 1rem 40px;
+  z-index: 3;
+  position: relative;
+}
+
+/* === Hamburguesas === */
+.burger {
+  position: absolute;
+  object-fit: contain;
+}
+
+.burger-left {
+  left: 5%;
+  top: 270px;
+  width: 28%;
+  z-index: 1;
+}
+
+.burger-center {
+  left: 36%;
+  top: 230px;
+  width: 30%;
+  z-index: 3;
+}
+
+.burger-right {
+  right: 5%;
+  top: 270px;
+  width: 28%;
+  z-index: 1;
+}
+
+/* === Vectores === */
+.vector-left,
+.vector-right {
+  position: absolute;
+  top: 25%;
+  height: 440px;
+  width: 900px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+}
+
+.vector-left {
+  left: 0;
+  background-image: url('../../public/images/vector_left.png');
+}
+
+.vector-right {
+  right: 0;
+  background-image: url('../../public/images/vector_right.png');
+}
+
+/* === Responsive === */
+@media screen and (max-width: 1024px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  /* Ocultar lateral y mostrar solo la central */
+  .burger-left,
+  .burger-right {
+    display: none;
+  }
+
+  .burger-center {
+    position: static;
+    display: block;
+    margin: 2rem auto;
+    width: 70%;
+    height: auto;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .vector-right {
+    display: none;
+  }
+
+  .vector-left {
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .burger-center {
+    width: 85%;
+  }
+
+  .vector-left {
+    top: 20%;
+    height: 320px;
+  }
+}

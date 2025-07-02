@@ -1,0 +1,139 @@
+.header {
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-family: 'Bowlby One', sans-serif;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Links para desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d9b8ff;
+}
+
+/* Login Button */
+.login {
+  background: #d9b8ff;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Dropdown para usuario logueado */
+.login .dropdown {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.login .dropdown.show {
+  display: block;
+}
+
+.login .dropdown li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.login .dropdown li:hover {
+  text-decoration: underline;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Responsive para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e1e1e;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    display: none;
+    border-top: 1px solid #444;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .login .dropdown {
+    position: static;
+    background: #fff;
+    color: black;
+    margin-top: 0.5rem;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .login .dropdown li {
+    padding: 0.5rem;
+    text-align: left;
+  }
+}

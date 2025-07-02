@@ -1,0 +1,62 @@
+.contact-page {
+  padding: 3rem 2rem;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.contact-title {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  background-color: #D1EF53;
+  color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 4px 4px 0px #000;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1.6rem;
+  color: #1e1e1e;
+}
+
+.contact-info p {
+  margin-bottom: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.4rem;
+  }
+}

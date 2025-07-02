@@ -1,0 +1,37 @@
+.testimonial {
+  width: 100%;
+  padding: 80px 0 40px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.testimonial h2 {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 80px;
+  color: #D1EF53;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 88.9%;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* === Responsive === */
+
+@media (max-width: 1024px) {
+  .testimonial h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial h2 {
+    font-size: 28px;
+  }
+}

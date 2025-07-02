@@ -1,0 +1,124 @@
+.orders-page {
+  padding: 3rem 2rem;
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.orders-title {
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.orders-empty {
+  text-align: center;
+  color: #cccccc;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.orders-table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.orders-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px #000;
+  color: #ffffff;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.orders-table th {
+  background-color: #111;
+  color: #D1EF53;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 1.1rem;
+}
+
+.orders-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Botón de ver detalles */
+.toggle-details {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #D1EF53;
+  color: #1e1e1e;
+  font-family: 'Bowlby One', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-details:hover {
+  transform: scale(1.05);
+}
+
+/* Detalles del pedido */
+.order-details {
+  background-color: #333;
+}
+
+.order-details h4 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #D9B8FF;
+  font-weight: 600;
+}
+
+.order-details ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.order-details li {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #eee;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .orders-title {
+    font-size: 2rem;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 1rem 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .toggle-details {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+}
