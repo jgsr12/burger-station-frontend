@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import axiosInstance from '../api/axiosInstance';
+import { useNavigate } from 'react-router-dom';
 import './Menu.css';
 
 interface Hamburger {
@@ -81,6 +82,7 @@ const Menu = () => {
     const [cart, setCart] = useState<CartItem[]>([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [activeExtrasIndex, setActiveExtrasIndex] = useState<number | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMenu = async () => {
@@ -179,7 +181,23 @@ const Menu = () => {
         return sum + item.price + getExtrasTotal(item);
     }, 0);
 
+    const checkAuth = async () => {
+        try {
+            const res = await axiosInstance.get('/auth/profile', { withCredentials: true });
+            return !!res.data?.email;
+        } catch {
+            return false;
+        }
+    };
+
     const handleConfirmOrder = async () => {
+        const isAuthenticated = await checkAuth();
+        if (!isAuthenticated) {
+            toast.warning('Debes iniciar sesión para hacer un pedido');
+            navigate('/login');
+            return;
+        }
+
         try {
             const hamburgersInCart = cart.filter(item => item.type === 'hamburger');
             const side = cart.find(i => i.type === 'side');
