@@ -183,7 +183,7 @@ const Menu = () => {
 
     const checkAuth = async () => {
         try {
-            const res = await axiosInstance.get('/auth/profile', { withCredentials: true });
+            const res = await axiosInstance.get('/auth/me', { withCredentials: true });
             return !!res.data?.email;
         } catch {
             return false;
