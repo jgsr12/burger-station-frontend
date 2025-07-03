@@ -9,6 +9,8 @@ import { AuthProvider } from './context/AuthContext';
 import OrdersPage from './pages/OrdersPage';
 import MenuPage from './pages/MenuPage';
 import ContactPage from './pages/ContactPage';
+import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/pedidos" element={<OrdersPage />} />
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/contacto" element={<ContactPage />} />
+          <Route path="/recuperar" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </Router>
     </AuthProvider>

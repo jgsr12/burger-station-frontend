@@ -58,7 +58,15 @@ const Login = () => {
         <button className="login-button" onClick={handleLogin}>Entrar</button>
 
         <p className="login-footer">
-          ¿Aún no tienes cuenta? <Link to="/registro" className="login-footer-link">únete a la estación</Link>
+          ¿Olvidaste tu contraseña?{' '}
+          <Link to="/recuperar" className="login-footer-link">
+            recupérala aquí
+          </Link>
+        </p>
+
+        <p className="login-footer">
+          ¿Aún no tienes cuenta?{' '}
+          <Link to="/registro" className="login-footer-link">únete a la estación</Link>
         </p>
       </div>
     </div>
